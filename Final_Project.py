@@ -79,7 +79,6 @@ def init_db():
     conn.commit()
     conn.close()
 
-# Run this once when the script loads
 init_db()
 
 # Helper to get a fresh DB connection per operation
