@@ -181,7 +181,6 @@ else:
     st.sidebar.divider()
     st.sidebar.subheader("Your Saved Recipes")
     
-    # Fetch user's chat history from SQLite
     conn = get_db_connection()
     c = conn.cursor()
     c.execute("SELECT session_id, title, messages FROM recipe_chats WHERE username = ?", (st.session_state.username,))
